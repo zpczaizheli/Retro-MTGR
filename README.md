@@ -9,6 +9,15 @@ Overview
 
 Environment Requirements
 
+numpy = 1.21.6
+
+pytorch = 1.13.1
+
+rdkit = 2022.03.1
+
+Matplotlib = 3.5.1
+
+Python = 3.7.8
 
 
 
