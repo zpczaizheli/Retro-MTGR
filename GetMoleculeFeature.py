@@ -63,7 +63,7 @@ def GetBondenergy(M_Mol,i,j):
 
 	elif str(BondType) == 'AROMATIC':
 		BondSymbol = '~'
-	else:
+	
 		
 	if atom1_Symbol == '*' or atom1_Symbol == '*':
 		BondEnergy_Table[atom1_Symbol + BondSymbol + atom2_Symbol] = '0'
