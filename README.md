@@ -23,3 +23,6 @@ Python = 3.7.8
 
 Model Training and Testing
 
+cd：Retro-MTGR
+python Train_Model-5.0.py
+
