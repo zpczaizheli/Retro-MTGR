@@ -112,7 +112,7 @@ def Get_changed_atoms_map(reaction):
     return Changed_Atoms_map
 
 
-def Get_Reaction_template(reaction,step):
+def Get_Reaction_(reaction,step):
     Changed_Atoms_map = Get_changed_atoms_map(reaction)
     Save_atom_Index_list_R = []
     Save_atom_Index_list_P = []
