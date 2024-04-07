@@ -544,7 +544,7 @@ def train(epochs, Datalist,device,Train_list,Test_list,model,model2,optimizer1,o
 		Smiles_R1 = Smiles_R1_dict[str(w)]
 		Smiles_R2 = Smiles_R2_dict[str(w)]
 		r = Smiles_P + '>>' + Smiles_R1 + '.' + Smiles_R2
-		t = Get_Reaction_template(r, step)
+		t = Get_Reaction_(r, step)
 		if t.split('>>')[0] not in T.keys():
 			T[t.split('>>')[0]] = [t]
 		else:
