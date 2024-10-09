@@ -17,15 +17,15 @@ Retro-MTGR: Molecule Retrosynthesis Prediction via Multi-Task Graph Representati
 ## Process
 ### Step 1: Data Processing
 The goal of this step is to convert the raw data into a format that Retro-MTGR can recognize.  
--Navigate to the `original Data` folder:
+- Navigate to the `original Data` folder:
 ```bash
 cd Retro-MTGR
 ```
--If the target is the uspto-50k dataset, run the following code:
+- If the target is the uspto-50k dataset, run the following code:
 ```bash
 python 50k-Data processing.py
 ```
--If the target is the uspto-MIT dataset, run the following code:
+- If the target is the uspto-MIT dataset, run the following code:
 ```bash
 python python mit-Data processing.py
 ```
@@ -33,17 +33,17 @@ Note: You need to modify the input file names in the code to select the files yo
 After the data processing is complete, the processed data needs to be moved to the data directory in the parent directory for the next step.
 
 ### Step 2: Model Training and Testing
--f you want to train and test the Retro-MTGR model, you need to run the following code:
+- f you want to train and test the Retro-MTGR model, you need to run the following code:
 ```bash
 cd Retro-MTGR
 python Train_Model-5.0.py
 ```
 Note: You need to modify the target data file name in the code to select the data to be executed.
--For example, if your target data is all the uspto-50k data, you need to change the file name input in the 'Train_Model-5.0.py' file to 'uspto50k-alldata.txt':
+- For example, if your target data is all the uspto-50k data, you need to change the file name input in the 'Train_Model-5.0.py' file to 'uspto50k-alldata.txt':
 ```bash
 Datapath = 'data/USPT-50K/class8-.txt'
 ```
--Additionally, you need to specify the range of the training and testing sets by using arrays:
+- Additionally, you need to specify the range of the training and testing sets by using arrays:
 
 ```bash
 Train_list = list(range(0, 300))
@@ -52,8 +52,9 @@ Test_list = list(range(300, 400))
 ## Output
 Once the model training is completed, you will get two files:
 
--Test-predict.txt: Contains the retrosynthesis prediction results for the target molecules in the test set.
--Test-result.txt: Contains detailed performance data of the model.
+- Test-predict.txt: Contains the retrosynthesis prediction results for the target molecules in the test set.
+
+- Test-result.txt: Contains detailed performance data of the model.
 
 
 
