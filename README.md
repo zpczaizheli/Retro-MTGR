@@ -41,7 +41,7 @@ python Train_Model-5.0.py
 Note: You need to modify the target data file name in the code to select the data to be executed.
 - For example, if your target data is all the uspto-50k data, you need to change the file name input in the 'Train_Model-5.0.py' file to 'uspto50k-alldata.txt':
 ```bash
-Datapath = 'data/USPT-50K/class8-.txt'
+Datapath = 'data/USPT-50K/uspto50k-alldata.txt'
 ```
 - Additionally, you need to specify the range of the training and testing sets by using arrays:
 
