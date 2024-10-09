@@ -33,7 +33,7 @@ Note: You need to modify the input file names in the code to select the files yo
 After the data processing is complete, the processed data needs to be moved to the data directory in the parent directory for the next step.
 
 ### Step 2: Model Training and Testing
-- if you want to train and test the Retro-MTGR model, you need to run the following code:
+- If you want to train and test the Retro-MTGR model, you need to run the following code:
 ```bash
 cd Retro-MTGR
 python Train_Model-5.0.py
