@@ -50,9 +50,7 @@ Train_list = list(range(0, 300))
 Test_list = list(range(300, 400))
 ```
 ## Output
-Once the model training is completed, you will get two files:
-
-- Test-predict.txt: Contains the retrosynthesis prediction results for the target molecules in the test set.
+Once the model training is completed, you will get one file:
 
 - Test-result.txt: Contains detailed performance data of the model.
 
