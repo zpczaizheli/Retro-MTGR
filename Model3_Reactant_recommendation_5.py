@@ -294,30 +294,12 @@ def exchangedata(x,y):
 Mol_Xing = Chem.MolFromSmiles('*')
 
 def get_atom_map_number(mol, atom_idx):
-    """
-    获取指定原子序号的 atom map number
 
-    参数:
-        mol (rdkit.Chem.Mol): 分子对象
-        atom_idx (int): 原子序号（从0开始）
-
-    返回:
-        int or None: atom map number，如果没有设置则返回 None
-    """
     atom = mol.GetAtomWithIdx(atom_idx)
     return atom.GetAtomMapNum() if atom.HasProp('molAtomMapNumber') else None
 
 def has_atom_map_number(mol, map1):
-    """
-    检查给定的 map1 是否是 mol 中某个原子的 atom map number
 
-    参数:
-        mol (rdkit.Chem.Mol): 分子对象
-        map1 (int): 要查找的 atom map number
-
-    返回:
-        bool: 是否存在该 map number
-    """
     for atom in mol.GetAtoms():
         if atom.HasProp('molAtomMapNumber'):
             if atom.GetAtomMapNum() == map1:
@@ -373,7 +355,7 @@ def Data_Processing(data,Labels_dict):
             mol_list = Chem.GetMolFrags(Fragments, asMols=True)
             smi1 = Chem.MolToSmiles(mol_list[0])
             smi2 = Chem.MolToSmiles(mol_list[1])
-            # print('sddddddddddddddddddddddddddddddddddddddd',smi1,smi2)
+
 
 
             Synthon1 = Chem.MolFromSmiles(smi1)
@@ -384,21 +366,12 @@ def Data_Processing(data,Labels_dict):
 
             Reactant_1, Reactant_2 = rank(mol_R1,mol_R1,map1,map2)
 
-            #
-            # if len(result) == 1:
-            #
-            #     img = Draw.MolsToGridImage([mol_P, mol_R1, mol_R2], molsPerRow=3, subImgSize=(1000, 1000))
-            #     plt.title(data[1])
-            #     plt.imshow(img)
-            #     plt.show()
 
             # Synthon_1, Synthon_2, Reactant_1, Reactant_2 = result[0], result[1], result[2], result[3]
 
             smi_extra1 = get_LG(Reactant_1)
             smi_extra2 = get_LG(Reactant_2)
 
-            # smi_extra1 = Chem.MolToSmiles(extra_structure1)
-            # smi_extra2 = Chem.MolToSmiles(extra_structure2)
 
             if smi_extra1 == ''  or smi_extra1 not in Labels_dict.keys():
                 smi_extra1 = 'None'
